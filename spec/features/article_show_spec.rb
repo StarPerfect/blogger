@@ -18,7 +18,6 @@ RSpec.describe 'Article Show Page' do
 
       click_link new_article.title
 
-      expect(current_path).to eq(articles_path(new_article.id))
       expect(page).to have_content(new_article.title)
       expect(page).to have_content(new_article.body)
     end
