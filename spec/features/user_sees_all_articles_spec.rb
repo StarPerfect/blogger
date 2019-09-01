@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'userssees all articles' do
+RSpec.describe 'users sees all articles' do
   describe 'they visit /articles' do
     it 'displays all articles' do
       article_1 = Article.create!(title: 'Title 1', body: 'Body 1')
