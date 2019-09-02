@@ -13,9 +13,10 @@ RSpec.describe 'Create New Article' do
       fill_in 'article[body]', with: 'Show article body'
 
       click_button 'Create'
-      
+
       expect(page).to have_content('Article Show Test Title')
       expect(page).to have_content('Show article body')
+      expect(page).to have_content("Article 'Article Show Test Title' has been created.")
     end
   end
 end
