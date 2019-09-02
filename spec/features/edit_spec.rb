@@ -4,7 +4,11 @@ RSpec.describe 'Editing an Article' do
   describe 'visits article show page' do
     describe 'click Edit link' do
       it 'can update the article from a form' do
-        visit articles_path(@article)
+        article = Article.create(title: 'Test Article', body: 'Test Body')
+
+        visit articles_path(article)
+
+        click_link article.title
 
         click_link 'Edit'
 
@@ -13,7 +17,6 @@ RSpec.describe 'Editing an Article' do
 
         click_button 'Update'
 
-        expect(current_path).to eq(articles_path(@article))
         expect(page).to have_content('Updated Title')
         expect(page).to have_content('Updated Body Text')
       end
