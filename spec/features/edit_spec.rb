@@ -19,6 +19,7 @@ RSpec.describe 'Editing an Article' do
 
         expect(page).to have_content('Updated Title')
         expect(page).to have_content('Updated Body Text')
+        expect(page).to have_content("Article 'Updated Title' has been updated.")
       end
     end
   end
