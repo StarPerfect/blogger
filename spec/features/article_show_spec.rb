@@ -30,7 +30,7 @@ RSpec.describe 'Article Show Page' do
       click_on 'Submit'
 
       expect(current_path).to eq(article_path(article))
-      expect(page).to have_content('Post a Cmment')
+      expect(page).to have_content('Post a Comment')
       expect(page).to have_content('ME!')
       expect(page).to have_content('So many thoughts on this article.')
     end
