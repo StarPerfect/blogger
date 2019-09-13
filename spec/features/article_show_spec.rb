@@ -13,6 +13,7 @@ RSpec.describe 'Article Show Page' do
 
       expect(page).to have_content(new_article.title)
       expect(page).to have_content(new_article.body)
+      expect(page).to have_content('2 Comments')
       expect(page).to have_content(comment_1.author_name)
       expect(page).to have_content(comment_1.body)
       expect(page).to have_content(comment_2.author_name)
